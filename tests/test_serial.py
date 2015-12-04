@@ -9,7 +9,7 @@ hdlr.setFormatter(formatter)
 logger.addHandler(hdlr) 
 logger.setLevel(logging.DEBUG)
 
-dev = CM17a('/dev/ttyUSB')
+dev = CM17a('/dev/ttyUSB0')
 dev.open()
 
 livinglamp = dev.actuator("A1")
