@@ -107,7 +107,7 @@ class SerialX10Controller(X10Controller):
         self._handle.setRTS(False)
 
     def write(self, aSequence):
-        logger.debug("Writing %s", hex(aSequence))
+        logger.debug("Writing %s", hex(chr(aSequence)))
         self._handle.write(aSequence)
         
     def read(self):
