@@ -108,7 +108,7 @@ class SerialX10Controller(X10Controller):
 
     def write(self, aSequence):
         logger.debug("Writing %s", hex(aSequence))
-        self._handle.write(chr(aSequence))
+        self._handle.write(aSequence)
         
     def read(self):
         res = self._handle.read()
